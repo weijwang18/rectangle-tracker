@@ -16,8 +16,8 @@ Rectangle.prototype.ifRectangle = function (a, b, c, d) {
 Rectangle.prototype.checkType = function (a, b, c, d) {
   if (a == b && a == c && a == d && c == d && b == c && b == d) {
     return "Square";
-    //   } else if (a == c || b == d) {
-    //     return "Quadrilateral";
+  } else if ((a == b && c == d) || (a == d && c == b) || (a == c && d == b)) {
+    return "Quadrilateral";
     //   } else {
     //     return "Trapizod";
   }
