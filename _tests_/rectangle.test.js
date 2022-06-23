@@ -20,4 +20,12 @@ describe("Rectangle", () => {
     const rectangle = new Rectangle(2, 3, 2, 3);
     expect(rectangle.checkType(2, 3, 2, 3)).toEqual("Quadrilateral");
   });
+  test("Should tell us if it is a trapezoid", () => {
+    const rectangle = new Rectangle(2, 3, 2, 5);
+    expect(rectangle.checkType(2, 3, 2, 5)).toEqual("Trapezoid");
+  });
+  test("should tell us if it is a rectangle or not", () => {
+    const rectangle = new Rectangle(0, 2, 2, 2);
+    expect(rectangle.ifRectangle(0, 2, 2, 2)).toEqual(false);
+  });
 });
