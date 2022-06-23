@@ -5,18 +5,20 @@ export default function Rectangle(side1, side2, side3, side4) {
   this.side4 = side4;
 }
 
-Rectangle.prototype.checkType = function(a, b, c, d) {
-    if (a == b && a == c &&
-        a == d && c == d &&
-        b == c && b == d)
-        return true;
-  
-    else if (a == b && c == d)
-        return true;
-    else if (a == d && c == b)
-        return true;
-    else if (a == c && d == b)
-        return true;
-    else
-        return false;
-}
+Rectangle.prototype.ifRectangle = function (a, b, c, d) {
+  if (a == b && a == c && a == d && c == d && b == c && b == d) return true;
+  else if (a == b && c == d) return true;
+  else if (a == d && c == b) return true;
+  else if (a == c && d == b) return true;
+  else return false;
+};
+
+Rectangle.prototype.checkType = function (a, b, c, d) {
+  if (a == b && a == c && a == d && c == d && b == c && b == d) {
+    return "Square";
+    //   } else if (a == c || b == d) {
+    //     return "Quadrilateral";
+    //   } else {
+    //     return "Trapizod";
+  }
+};
