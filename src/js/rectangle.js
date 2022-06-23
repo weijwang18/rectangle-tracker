@@ -4,7 +4,7 @@ export default function Rectangle(side1, side2, side3, side4) {
   this.side3 = side3;
   this.side4 = side4;
 }
-
+  
 
 Rectangle.prototype.checkType = function() {
     if (a == b && a == c &&
